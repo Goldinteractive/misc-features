@@ -1,7 +1,7 @@
 /**
- * Confirm action feature class.
+ * Confirm click feature class.
  */
-class ConfirmAction extends gi.features.Feature {
+class ConfirmClick extends gi.features.Feature {
 
   init() {
     this.addEventListener(this.node, 'click', this._clickListener())
@@ -17,8 +17,8 @@ class ConfirmAction extends gi.features.Feature {
 
 }
 
-ConfirmAction.defaultOptions = {
+ConfirmClick.defaultOptions = {
   confirmMessage: 'Do you really want to do that?'
 }
 
-export default ConfirmAction
+export default ConfirmClick

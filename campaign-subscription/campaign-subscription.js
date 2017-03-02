@@ -13,7 +13,7 @@ class CampaignSubscription extends gi.features.Feature {
       return
     }
 
-    this.$message = this.$('[data-form-message]')
+    this.$message = this.$(this.options.messageSelector)
     this.addEventListener(this.node, 'submit', this._submitListener())
   }
 
@@ -21,15 +21,17 @@ class CampaignSubscription extends gi.features.Feature {
     return (e) => {
       e.preventDefault()
       var $form = e.currentTarget
+      var formData = {}
 
       this.node.classList.add(this.options.loadingClass)
 
-      var formData = {}
       new FormData($form).forEach((value, key) => {
         formData[key] = value
       })
 
-      gi.utils.fetch.jsonP($form.action +'?'+ gi.utils.object.serialize(formData), {
+      var url = $form.action +'?'+ gi.utils.object.serialize(formData)
+
+      gi.utils.fetch.jsonP(url, {
         method: 'GET'
       }).then(this.feedback.bind(this))
     }
@@ -68,6 +70,7 @@ class CampaignSubscription extends gi.features.Feature {
 CampaignSubscription.defaultOptions = {
   unknownErrorMessage: 'An unknown error occured sending newsletter form',
   loadingClass: '-loading',
+  messageSelector: '[data-form-message]',
   messageErrorClass: '-error',
   messageSuccessClass: '-success'
 }
