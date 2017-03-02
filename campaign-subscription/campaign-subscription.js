@@ -61,10 +61,6 @@ class CampaignSubscription extends gi.features.Feature {
     }
   }
 
-  destroy() {
-    super.destroy()
-  }
-
 }
 
 CampaignSubscription.defaultOptions = {
