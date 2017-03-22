@@ -1,4 +1,4 @@
-## Select url
+## Select url
 
 Switch location when value of select has been changed.
 

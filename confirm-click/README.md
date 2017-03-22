@@ -1,4 +1,4 @@
-## Confirm click
+## Confirm click
 
 Display a native confirm dialog before performing a click.
 

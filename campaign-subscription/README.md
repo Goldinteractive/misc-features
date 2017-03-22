@@ -1,4 +1,4 @@
-## Campaign subscription
+## Campaign subscription
 
 Campaign subscription form with ajax.
 

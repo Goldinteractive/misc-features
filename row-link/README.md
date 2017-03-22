@@ -1,4 +1,4 @@
-## Row link
+## Row link
 
 Make whole row (tr) clickable.
 
