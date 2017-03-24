@@ -2,7 +2,7 @@
 
 Extends [slider feature](https://github.com/Goldinteractive/feature-slider) to scroll from an percent offset to the start to show the user that the content is scrollable.
 
-### Dependencies {
+### Dependencies
 
 * [scrollmonitor](https://github.com/stutrek/scrollMonitor)
 
