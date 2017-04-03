@@ -62,7 +62,7 @@ class IndicationSlider extends FeatureSlider {
  */
 IndicationSlider.defaultOptions = Object.assign({}, FeatureSlider.defaultOptions, {
   scrollOffset: false,
-  scrollOffsetPercent: 30
+  scrollOffsetPercent: 20
 })
 
 export default IndicationSlider
