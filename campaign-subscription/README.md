@@ -23,6 +23,15 @@ Campaign subscription form with ajax.
 ```js
 gi.features.add('campaign-subscription', CampaignSubscription, {
 
+  // clear user input values after successful subscription
+  resetFormOnSuccess: true,
+
+  // overwrite specific error message from campaign with own one
+  ownSuccessMessage: null,
+
+  // overwrite specific error message from campaign with own one
+  ownErrorMessage: null,
+
   // error message if ajax request fails everything else fails and no 
   unknownErrorMessage: 'An unknown error occured sending newsletter form'
 
