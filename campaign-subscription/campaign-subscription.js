@@ -46,10 +46,9 @@ class CampaignSubscription extends gi.features.Feature {
         }
       }
 
-      var url = this.node.action +'?'+ gi.utils.object.serialize(formData)
-
-      gi.utils.fetch.jsonP(url, {
-        method: 'GET'
+      gi.utils.fetch.jsonP(this.node.action, {
+        method: 'GET',
+        queryParams: formData
       }).then(this.feedback.bind(this))
     }
   }
